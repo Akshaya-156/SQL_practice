@@ -1,7 +1,6 @@
 You are given a table user events that tracks user activity with the following schema:
 
  
-
 Table: events
 +-------------+----------+
 | COLUMN_NAME | DATA_TYPE|

@@ -1,35 +1,22 @@
-use techtfq
-create table Day_Indicator
-(
-	Product_ID 		varchar(10),	
-	Day_Indicator 	varchar(7),
-	Dates			date
-);
-insert into Day_Indicator values ('AP755', '1010101', to_date('04-Mar-2024','dd-mon-yyyy'));
-insert into Day_Indicator values ('AP755', '1010101', to_date('05-Mar-2024','dd-mon-yyyy'));
-insert into Day_Indicator values ('AP755', '1010101', to_date('06-Mar-2024','dd-mon-yyyy'));
-insert into Day_Indicator values ('AP755', '1010101', to_date('07-Mar-2024','dd-mon-yyyy'));
-insert into Day_Indicator values ('AP755', '1010101', to_date('08-Mar-2024','dd-mon-yyyy'));
-insert into Day_Indicator values ('AP755', '1010101', to_date('09-Mar-2024','dd-mon-yyyy'));
-insert into Day_Indicator values ('AP755', '1010101', to_date('10-Mar-2024','dd-mon-yyyy'));
-insert into Day_Indicator values ('XQ802', '1000110', to_date('04-Mar-2024','dd-mon-yyyy'));
-insert into Day_Indicator values ('XQ802', '1000110', to_date('05-Mar-2024','dd-mon-yyyy'));
-insert into Day_Indicator values ('XQ802', '1000110', to_date('06-Mar-2024','dd-mon-yyyy'));
-insert into Day_Indicator values ('XQ802', '1000110', to_date('07-Mar-2024','dd-mon-yyyy'));
-insert into Day_Indicator values ('XQ802', '1000110', to_date('08-Mar-2024','dd-mon-yyyy'));
-insert into Day_Indicator values ('XQ802', '1000110', to_date('09-Mar-2024','dd-mon-yyyy'));
-insert into Day_Indicator values ('XQ802', '1000110', to_date('10-Mar-2024','dd-mon-yyyy'));
+PROBLEM STATEMENT:
+In the given input table DAY_INDICATOR field indicates the day of the week with the first character being Monday, followed by Tuesday and so on.
+Write a query to filter the dates column to showcase only those days where day_indicator character for that day of the week is 1
 
+	INPUT		
+PRODUCT_ID DAY_INDICATOR	DATES
+	AP755	1010101	         04-03-2024
+	AP755	1010101           05-03-2024
+	AP755	1010101  	 06-03-2024
+	AP755	1010101	         07-03-2024
+	AP755	1010101  	08-03-2024
+	AP755	1010101  	09-03-2024
+	AP755	1010101	       10-03-2024
+	XQ802	1000110        04-03-2024
+	XQ802	1000110        05-03-2024
+	XQ802	1000110	       06-03-2024
+	XQ802	1000110        07-03-2024
+	XQ802	1000110	      08-03-2024
+	XQ802	1000110	      09-03-2024
+	XQ802	1000110       10-03-2024
 
-select *, DATEPART(dw,dates) as Dayofweek,
-((DATEPART(dw,dates)+5)%7 +1) as updateddow
-
- from day_indicator
-
- select product_id,Day_Indicator ,dates
- from( 
-       select * 
-         ,case when substring(day_indicator, (((DATEPART(dw,dates)+5)%7) +1),1)='1' then 'include'  else 'exclude' end as flag
-	     from day_indicator) x
-	where flag ='include'
 

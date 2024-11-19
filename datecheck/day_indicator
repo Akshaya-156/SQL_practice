@@ -1,4 +1,5 @@
-PROBLEM STATEMENT:
+# 7
+PROBLEM STATEMENT: 
 In the given input table DAY_INDICATOR field indicates the day of the week with the first character being Monday, followed by Tuesday and so on.
 Write a query to filter the dates column to showcase only those days where day_indicator character for that day of the week is 1
 

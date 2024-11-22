@@ -1,15 +1,32 @@
-	"PROBLEM STATEMENT: 
-For the given friends, find the no of mutual friends"					
-						
-						
-						
-						
-	INPUT		                                                             OUTPUT		
-	FRIEND1	FRIEND2	                                        	FRIEND1	FRIEND2	MUTAL_FRIENDS
-	Jason	Mary	                                              	Jason	Mary	2
-	Mike	Mary	                                              	John	Mary	0
-	Mike	Jason		                                              Mike	Jason	1
-	Susan	Jason		                                               Mike	Mary	1
-	John	Mary		                                              Susan	Jason	1
-	Susan	Mary	                                              	Susan	Mary	1
+ROBLEM STATEMENT: 
+For the given friends, find the no of mutual friends
 
+
+INPUT		
+FRIEND1	FRIEND2	
+Jason	Mary	
+Mike	Mary	
+Mike	Jason	
+Susan	Jason	
+John	Mary	
+Susan	Mary	
+
+
+
+
+
+
+		
+OUTPUT		
+FRIEND1	FRIEND2	MUTAL_FRIENDS
+Jason	Mary	2
+John	Mary	0
+Mike	Jason	1
+Mike	Mary	1
+Susan	Jason	1
+Susan	Mary	1
+
+						
+						
+						
+	

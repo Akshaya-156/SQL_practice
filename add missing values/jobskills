@@ -1,1 +1,40 @@
 
+PROBLEM STATEMENT: 
+In the given input table, there are rows with missing JOB_ROLE values. Write a query to fill in those blank fields with appropriate values.
+Assume row_id is always in sequence and job_role field is populated only for the first skill.
+Provide two different solutions to the problem.
+
+
+
+INPUT		
+ROW_ID	JOB_ROLE          	SKILLS
+1	    Data Engineer	          SQL
+2		                         Python
+3	                          	AWS
+4	                        	Snowflake
+5	                        	Apache Spark
+6	     Web Developer	        Java
+7	                          	HTML
+8		                          CSS
+9	     Data Scientist	       Python
+10		                     Machine Learning
+11		                     Deep Learning
+12		                      Tableau
+
+
+
+
+	OUTPUT		
+	ROW_ID	JOB_ROLE	SKILLS
+	1	Data Engineer	SQL
+	2	Data Engineer	Python
+	3	Data Engineer	AWS
+	4	Data Engineer	Snowflake
+	5	Data Engineer	Apache Spark
+	6	Web Developer	Java
+	7	Web Developer	HTML
+	8	Web Developer	CSS
+	9	Data Scientist	Python
+	10	Data Scientist	Machine Learning
+	11	Data Scientist	Deep Learning
+	12	Data Scientist	Tableau
